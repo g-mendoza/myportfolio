@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>gelleinemendoza</title>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-4-dev/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+	<style type="text/css" media="screen">
+		html {
+			margin-top: 0px !important;
+		}
+	</style>
+	<style>
+		body {
+			font-family: "Open Sans", sans-serif;
+			font-size: 18px;
+			line-height: 1.8;
+			color: #929292;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			overflow-wrap: break-word;
+			word-wrap: break-word;
+			text-align: center;
+		}
+
+	    a.fab.text-secondary{
+			color: white!important;
+		}
+		/* scrollbar */
+		::-webkit-scrollbar {
+			width: 20px;
+		}
+
+		::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 5px rgb(0, 0, 0);
+			border-radius: 0px;
+		}
+
+		::-webkit-scrollbar-thumb {
+			background-image: linear-gradient(330deg, #4B1EDA 0%, #F32767 100%);
+			border-radius: 5px;
+		}
+
+		::-webkit-scrollbar-thumb:hover {
+			background: #000000;
+		}
+
+		.logo {
+			height: 50px;
+			width: 50px;
+			position: absolute;
+		}
+
+		/* navigation */
+		.navbar {
+			
+			border: rgb(255, 255, 255);
+			background-color: rgb(255, 255, 255);
+			box-shadow: 8px 7px 36px 3px rgba(0, 0, 0, 0.5);
+		}
+
+		.navbar-nav .nav-item .nav-link:hover {
+			color: #701eda;
+			font-weight: bolder;
+		}
+		
+		.nav-item {
+			padding-left: 30px;
+			font-size: 12px;
+		}
+	
+		/*home */
+		.jumbotron {
+			margin-top: -135px;
+			background-image: url(https://imgur.com/8IFjD31.png);
+			background-position: center;
+			background-position-x: center;
+			background-position-y: bottom;
+			background-repeat: no-repeat;
+			background-size: cover;
+			height: 110vh;
+			background-position-x: 50%;
+			background-position-y: 100%;
+		}
+
+		.profile {
+			width: 320px;
+			height: 300px;
+			border-radius: 100%;
+			box-shadow: 8px 7px 36px 3px rgba(0, 0, 0, 0.5);
+		}
+		.flip-box{
+			width: 320px;
+			height: 300px;
+			background-color: transparent;
+			margin:auto;
+		}
+		.flip-box:hover , .flip-box-inner{
+			transform: rotateY(180deg);
+		}
+		.flip-box-back{
+			color:rgb(214, 212, 212);
+			width: 320px;
+			height: 300px;
+			border-radius: 50%;
+			transform: rotateY(180deg);
+		}
+		.flip-box-back, .flip-box-front{
+			vertical-align: middle;
+			position: absolute;
+			width: 320px;
+			height: 300px;
+			backface-visibility:hidden;
+		}
+		.flip-box-front{
+			background-color: transparent;
+		}
+		.flip-box-inner{
+			
+			justify-content: center;
+			text-align: center;
+			transition: transform 0.5s;
+			transform-style: preserve-3d;
+
+		}
+		.name {
+			font-weight: 700;
+			font-size: 50px;
+			color: rgb(255, 255, 255);
+			letter-spacing: 6px;
+		}
+
+		/* texts */
+		.gradient {
+
+			background-image: linear-gradient(330deg, #4B1EDA 0%, #F32767 100%);
+			background-image: gradient(linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22));
+			color: transparent;
+			-webkit-background-clip: text;
+			background-clip: text;
+		}
+
+		h2,
+		h4 {
+			text-align: center;
+			letter-spacing: 6px;
+			padding-bottom: -50px;
+			font-size: 40px;
+			font-size: 50px;
+		}
+
+		h3 {
+			text-align: center;
+		}
+
+		/* about */
+		.about  {
+			background-image: url(https://i.imgur.com/p1aSRGb.png);
+			background-size: 100%;
+			/* filter: blur(2px);
+  			-webkit-filter: blur(8px); */
+			background-position: center;
+			image-resolution:inherit;
+			height: 80vh;
+			background-repeat: no-repeat;
+			height: 100vh;
+		}
+
+		.intro {
+			background-color: white;
+			border: 10px solid #d1cfd0;
+			padding: 30px;
+			font-size: 20px;
+			border-radius: 5px;
+		}
+				/* BOXES */
+		/* #boxes{
+			margin-top: 20px;
+		
+		} */
+
+
+		#boxes .box{
+			margin: 2px;
+			float: left;
+			width: 24%;
+			padding: 10px;
+			text-align: center;
+			/* display:block
+			box-sizing: border-box; */
+		}
+
+		#boxes .box img{
+			width: 150px;
+		}
+
+		/* gallery */
+		
+		.gallery {
+			margin: 0% 10%;
+			background-image: linear-gradient(transparent, rgb(150, 148, 148));
+			/* background-image: linear-gradient(330deg, #4B1EDA 0%, #F32767 100%); */
+			
+			background-size: contain;
+			background-position: static;
+			padding: 10px;
+			border-radius: 20px;
+			
+		}
+		.row .col-sm-4
+		{
+			/* background-color: ivory; */
+			
+			border: 2px inset rgb(255, 255, 255);
+			padding: 10px;
+			/* margin: 10px; */
+			border-radius: 5%;
+			align-items: center;
+			
+			
+		}
+		
+		
+		.img-responsive {
+			width: 100%;
+		}
+
+		.col-sm-4 {
+			padding: 5px;
+			width: 150px;
+		}
+
+	
+		/* buttons */
+		.btn {
+			justify-items: center;
+			margin-left: 30px;
+		}
+
+		.btn-default {
+			border-radius: 10px;
+			background-image: linear-gradient(330deg, #4B1EDA 0%, #F32767 100%);
+			color: #fff;
+			font-size: 15px;
+			display: inline-block;
+		}
+
+		.btn-default:hover {
+			background: rgb(52, 37, 98);
+			color: rgb(255, 255, 255);
+		}
+
+		#myBtn {
+			display: none;
+			border: none;
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+			z-index: 99;
+			background-image: linear-gradient(330deg, #4B1EDA 0%, #F32767 100%);
+			color: white;
+			outline: rgb(255, 255, 255);
+			cursor: pointer;
+			padding: 15px;
+			border-radius: 10px;
+			font-size: 18px;
+		}
+
+		#myBtn:hover {
+			background: rgb(52, 37, 98);
+		}
+
+		/* testimonials */
+		.testimonies {
+			margin: 0px 90px;
+			background-image: url(https://i.imgur.com/wkJG0Lb.png);
+			background-size: cover;
+			background-repeat: repeat;
+			background-color: rgb(255, 255, 255);
+		}
+
+		.client {
+			border: 5px solid rgb(233, 46, 147);
+		}
+
+		.testimonials {
+			border: 2px solid #ccc;
+			background-color: #eee;
+			border-radius: 5px;
+			padding: 16px;
+			margin: 16px 0;
+		}
+
+		.testimonials::after {
+			content: "";
+			clear: both;
+			display: table;
+		}
+
+		.testimonials img {
+			margin-left: 30px;
+			border-radius: 50%;
+		}
+
+		.testimonials span {
+			font-size: 20px;
+			margin-left: 15px;
+		}
+
+		@media (max-width: 480px) {
+			.testimonials {
+				text-align: center;
+			}
+
+			.testimonials img {
+				margin: auto;
+				float: left;
+				display: block;
+			}
+
+		}
+
+		/* contact info */
+		.contact {
+			padding: 50px 20px;
+			background-image: linear-gradient(330deg, #4B1EDA 0%, #F32767 100%);
+		}
+
+		.contact-info {
+			background-color: #ffffff;
+			border-radius: 10px;
+		}
+
+		.address-social {
+			font-size: 36px;
+			text-align: center;
+		}
+
+		.address-social:hover {
+			transform: scale(1.5);
+		}
+
+		.contact-content {
+			justify-content: space-around;
+		}
+		.row #spacing{
+			margin:20px;
+		}
+
+		.address-social {
+			font-size: 36px;
+			text-align: center;
+			background: -moz-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+			background: -webkit-linear-gradient(top, #e72c83 0%, #a742c6 100%);
+			background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+			-webkit-text-fill-color: transparent;
+			color: white;
+		}
+
+		/*  footer  */
+		.logo2 {
+			width: 10%;
+			height: 10%;
+		}
+
+		.fab {
+			padding: 0px 30px;
+			margin-top: 30px;
+			font-size: 36px;
+			text-decoration: none;
+			color: white;
+			margin: 5px 2px;
+		}
+
+		.fab:hover {
+			text-decoration: none;
+			transform: scale(1.5);
+		}
+
+		footer {
+			background-image: url(https://i.imgur.com/5NBRD87.png);
+			image-resolution: 300px;
+			background-position: top;
+			background-position-x: center;
+			background-position-y: bottom;
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin-bottom: -50px;
+			height: 50vh;
+			padding: 50px;
+			background-position-y: 0%;
+			text-align: center;
+		}
+
+		.socials {
+			font-size: 59px;
+			padding: 0px;
+			margin-bottom: 120px;
+			display: flex;
+			justify-content: center;
+			text-align: center;
+		}
+
+		@media (min-width: 1025px) and (max-width: 1280px) {}
+
+			/* Device = Laptops, Desktops */
+			@media (min-width: 1025px) and (max-width: 1280px) {}
+
+			/* Device = Most of the Smartphones Mobiles (Portrait)*/
+			@media (min-width: 320px) and (max-width: 480px) {
+				[class*="col-"] {
+					width: 100%;
+				}
+				.flip-box img{
+					width: 200px;
+					height: auto;
+				}
+				img.logo{
+					position: relative;
+				}
+				.navbar-toggler{
+					margin-top: 5px;
+					font-size: 2.15rem;
+				}
+				#boxes .box{
+					float: none;
+					text-align: center;
+					width: 100% ;
+				}
+				#spacing{
+					width: 100%;
+					
+				}
+				.foot {
+					width: 60%;
+					text-align: center;
+				}
+				footer{
+					margin-bottom: 0;
+				}
+				
+			}
+	</style>
+</head>
+
+<body>
+	<!---NAVIGATION-->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="fixed">  
+		<a class="navbar-brand" href="#" data-aos="fade-in" data-aos-id="super-duper"><img
+				src="https://i.imgur.com/hVtiSIY.png" class="logo" alt="logo"></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a href="#" class="nav-link">HOME <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item"><a href="#about" class="nav-link">ABOUT</a></li>
+				<li class="nav-item"><a href="#services" class="nav-link">SERVICES</a></li>
+				<li class="nav-item"><a href="#gallery" class="nav-link">GALLERY</a></li>
+				<li class="nav-item"><a href="#testimonies" class="nav-link">TESTIMONIALS</a></li>
+				<li class="nav-item"><a href="#contact" class="nav-link">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</button>
+	</nav>
+	<div class="jumbotron">
+		<div class="container text-center">
+			<br><br><br>
+			<h5 class="name" data-aos="fade-in">GELLEINE <br> MENDOZA</h5>
+			<p  style="color: rgb(209, 201, 201);">Graphics and UI/UX Designer</p>
+				<div class="flip-box">
+				<div class="flib-box-inner" >
+					<div class="flip-box-front">
+					<img src="https://i.imgur.com/V3IwJlR.jpg" class="profile">
+					</div>
+					<div class="flip-box-back" style="background-color: #000000;">
+						<div class="flip-box-front">
+							<img src="https://i.imgur.com/hVtiSIY.png" class="profile">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg">
+		<!---ABOUT---->
+		<div data-aos="fade-in" class="about" id="about" style="margin-bottom: 250px;">
+			<div class="container" >
+				<h4 data-aos="fade-down" class="gradient"><span style="font-weight: bold;">ABOUT</span> ME</h4>
+				<h3>It's great to meet you!</h3>
+				<p class="intro" style="text-align: center;">Hi, I am Gelleine Mendoza.
+					I offer graphic services to businesses and individuals through creating expressive and communicating designs . It's always my appetite to see my clients
+					happy and more than satisfied with my artworks.  <br> <br>
+					If your looking for an impassioned colleage, I am here! I work passionately to the best of my skills and abilities
+					allow. Hope to hear from you soon! I'm glad to work for you and give you the best! 
+				</p>
+				<a href="https://www.youtube.com/watch?v=xeKJStQBVOA" target="_blank" ><button type="button" class="btn btn-default" data-aos="fade-right"> WATCH MY INTRODUCTION</button></a>
+				<a href="https://drive.google.com/file/d/1dmVpp3N_4sVatfKz0V1Q4VVijw1Vdvh3/preview" target="_blank"><button type="button" class="btn btn-default" data-aos="fade-left"> DOWNLOAD CV</button></a>
+				<!-- <iframe src="https://drive.google.com/file/d/1f3TzS4umDWxp34idr41tlbiI-6uFlTq0/preview" width="640" height="480" allow="autoplay"></iframe> -->
+			</div>
+		</div> <br><br>
+		<!---SERVICES---->
+		<h4 id="gallery" class="gradient" data-aos="fade-down">MY <span style="font-weight: bold;">SKILLS</span></h4>
+		<h3>Services Offered</h3><br>
+		<section id="boxes">
+			<div class="container">
+				<div class="box">
+					<img src="https://imgur.com/pmQfwXP.png" alt="">
+					<h3 style="font-weight: bold;"> Branding</h3>
+					<p>I make powerful visual identity using Adobe Illustrator.</p>
+				</div>
+				<div class="box">
+					<img src="https://imgur.com/pmQfwXP.png" alt="">
+					<h3 style="font-weight: bold;"> Graphics Design</h3>
+					<p>I am skillful in using Canva, Adobe Ps and Adobe Ai.</p>
+				</div>
+				<div class="box">
+					<img src="https://imgur.com/pmQfwXP.png" alt="">
+					<h3 style="font-weight: bold;"> UI/UX Design</h3>
+					<p>I used Adobe XD and Figma in creating prototypes</p>
+				</div>
+				<div class="box">
+					<img src="https://imgur.com/pmQfwXP.png" alt="">
+					<h3 style="font-weight: bold;">Video Editing</h3>
+					<p>I create impressive videos using Adobe Premiere and After Effects.</p>
+				</div>
+			</div>
+		</section>
+		<!---GALLERY---->
+		<div></div>
+		<h4 id="gallery" class="gradient" data-aos="fade-down">MY <span style="font-weight: bold;">WORKS</span></h4>
+		<h3>Selected Projects</h3><br>
+		<div class="gallery">
+			<div class="container-fluid bg-4 ">
+				<div class="row" >
+					<div class="col-sm-4" data-aos="fade-right" >
+						<img src="https://i.imgur.com/opygU6q.png"   class="img-responsive">
+					</div>
+					<div class="col-sm-4"  data-aos="fade-up" >
+						<img src="https://imgur.com/hScbCQf.png" class="img-responsive">
+					</div>
+					<div class="col-sm-4"  data-aos="fade-left">
+						<img src="https://i.ibb.co/SKqTSsR/VECTOR-Game-Studio.png"   class="img-responsive">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4"  data-aos="fade-down">
+						<img src="https://imgur.com/BRqq71t.png" class="img-responsive">
+					</div>
+					<div class="col-sm-4"  data-aos="fade-down">
+						<img src="https://imgur.com/sPwAnMs.png" class="img-responsive">
+					</div>
+					<div class="col-sm-4"  data-aos="fade-left">
+						<img src="https://imgur.com/8g8zZbc.png" class="img-responsive">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4" data-aos="fade-left">
+						<img src="https://imgur.com/3IFVZC9.png" class="img-responsive">
+					</div>
+					<div class="col-sm-4" data-aos="fade-up">
+						<img src="https://imgur.com/AtKPJ0X.png" class="img-responsive">
+					</div>
+					<div class="col-sm-4">
+						<img src="https://imgur.com/3GA2BvH.png" class="img-responsive">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4" data-aos="fade-left">
+						<img src="https://i.ibb.co/3BZ3V0W/Kids-Playgames.jpg"  class="img-responsive">
+					</div>
+					<div class="col-sm-4" data-aos="fade-up">
+						<img src="https://i.ibb.co/ZVMfT2Z/plantagram.jpg"   class="img-responsive">
+					</div>
+					<div class="col-sm-4">
+						<img src="https://i.ibb.co/yNWg0fy/Kids-Play-Titles.jpg"  class="img-responsive">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div> <br>
+	<!---TESTIMONIES---->
+	<div id="testimonies" class="testimonies" data-aos="fade-in">
+		<h4 class="gradient" data-aos="fade-down">TESTIMONIALS</h4>
+		<h3>What my clients say</h3>
+		<div class="container testimonials" data-aos="fade-left">
+			<img src="https://i.imgur.com/vqdbzVZ.jpg" class="client" style="width:90px">
+			<p><i>"Always a job well done! I'm so amazed at my logo, I really like it at my first sight."</i></p>
+			<p class="gradient" style="font-size: 15px;"><span>JOSIE ALVAREZ.</span> <span style="color:rgb(52, 37, 98)">Entrepreneur </span></p>
+		</div>
+		<div class="container testimonials" data-aos="fade-left">
+			<img src="https://i.imgur.com/rNGMxVu.jpg" class="client" style="width:90px ">
+			<p><i>"Not just a beautiful art but also happines is what I received and its priceless!"</i></p>
+			<p class="gradient"><span>HELEN FAVORITO.</span> <span style="color:rgb(52, 37, 98)">Business Woman</span>
+			</p>
+		</div>
+		<div class="container testimonials" data-aos="fade-right">
+			<img src="https://i.imgur.com/E2T9hnX.jpg" class="client" style="width:90px">
+			<p><i>"if you need a friendly, passionate and talented artist, I highly recommend her."</i></p>
+			<p class="gradient"><span>JOHN CARLO MARTIN.</span> <span style="color:rgb(52, 37, 98)">Civil Engineering Student</span></p>
+		</div>
+		<div class="container testimonials" data-aos="fade-left">
+			<img src="https://i.imgur.com/RzzWDVX.jpg" class="client" style="width:90px ">
+			<p><i>"Her service is trusted and her works are always astounding."</i></p>
+			<p class="gradient"><span>JHEN DEMI LANDICHO.</span> <span style="color:rgb(52, 37, 98)">Political Science Student</span></p>
+		</div>
+		<div class="container testimonials" data-aos="fade-left">
+			<img src="https://i.ibb.co/JHjNbpK/75204484-2366466446816345-7533616453887459328-n-1.jpg" class="client" style="width:90px ">
+			<p><i>"Be ready to witness superb skills. God blessed her with so much of that."</i></p>
+			<p class="gradient"><span>PAULINE MIRANDA.</span> <span style="color:rgb(52, 37, 98)">Industrial Engineer</span></p>
+		</div>
+		<div class="container testimonials" data-aos="fade-left">
+			<img src="https://i.ibb.co/zJVQfxk/117770718-3775010552516255-2739374483208249296-n.jpg" class="client" style="width:90px ">
+			<p><i>"Always work with excellence and able to work under pressure."</i></p>
+			<p class="gradient"><span>JOHN DOMINIC SAMBO.</span> <span style="color:rgb(52, 37, 98)">Game Developer</span></p>
+		</div>
+	</div>
+	<!---CONTACT---->
+	<div class="contact" id="contact">
+		<div class="container contact-info">
+			<h4 class="gradient" data-aos="fade-in" style="margin-top: 20px;">CONTACT ME</h4>
+			<p>You are more than welcome to contact me. Schedule an interview, give me a call, or send me the job
+				description.<br> I reply promptly within the day.
+			</p>
+			<div class="row contact-content">
+				<div class="row">
+					<div  id="spacing" >
+						<div class="d-flex justify-content-around">
+							<i style="font-size: 50px;" class="fab fa-skype address-social" aria-hidden="true"  data-aos="fade-left"></i>
+						</div>
+						<p  class="gradient">live:cis.156f251d0564133d</p>
+
+					</div>
+					<div  id="spacing">
+						<div class="d-flex justify-content-around">
+							<i  style="font-size: 50px;" class="fas fa-phone-alt pr-2 address-social" data-aos="fade-left"></i>
+						</div>
+						<p class="gradient">+63 966 800 5303</p>
+
+					</div>
+					<div  id="spacing" >
+						<div class="d--flex justify-content-around">
+							<i  style="font-size: 50px;"class="far fa-envelope address-social" data-aos="fade-left"></i><br>
+						</div>
+						<p class="gradient">mendozagelleine@gmail.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--FOOTER-->
+	<footer>
+		<div class="foot">
+			<div class="col-12">
+				<a href="#">
+					<img src="https://i.imgur.com/hVtiSIY.png" class="logo2" alt="logo" width="60px">
+				</a>
+				<h4 class="text-header mt-5 footer-text" style=" font-size:12px; color:white">
+					KNOW MORE ABOUT ME
+				</h4>
+			</div>
+
+			<div class="socials">
+				<a href="https://web.facebook.com/GelleineBernabeMendoza/"
+					class="fab fa-facebook-f social-icon text-secondary"></a>
+				<a href="https://twitter.com/mendozagelleine" 
+					class="fab fa-twitter social-icon text-secondary"></a>
+				<a href="https://www.instagram.com/mendozagelleine/"
+					class="fab fa-instagram social-icon text-secondary"></a>
+				<a href="https://www.linkedin.com/in/gelleine-mendoza-786390167/"
+					class="fab fa-linkedin-in social-icon text-secondary "></a>
+			</div>
+
+		</div>
+	</footer>
+
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 180,
+			duration: 800
+		});
+	</script>
+	<script>
+		mybutton = document.getElementById("myBtn");
+		window.onscroll = function () { scrollFunction() };
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		}
+		function topFunction() {
+			document.body.scrollTop = 0; 
+			document.documentElement.scrollTop = 0; 
+		}
+	</script>
+</body>
+</html>
